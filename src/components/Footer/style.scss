@@ -1,0 +1,166 @@
+@import '../../../minxin.scss';
+
+footer{
+    color: #fff;
+    background: url(../../assets/footer/bgFooter.png), lightgray 50% / cover no-repeat;
+    padding: 6rem 0;
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+        .logo{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    .logo-title{
+        font-style: normal;
+        line-height: 3rem;
+        font-size: 3.5rem;
+        @include md{
+            font-size: 1.3rem;
+
+        }
+    }
+
+    .list-content, .list-about{
+        font-family: Averta Std CY;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.3rem; 
+        // text-transform: uppercase;
+    }
+
+    .title-top{
+        // width: 60%;
+        // font-family: Averta Std CY;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.3px; 
+        text-transform: uppercase;
+
+        @include md {
+        font-size: 1rem;
+
+        }
+    }
+
+    .title-bot{
+        width: 60%;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        opacity: 0.8;
+        @include md {
+            font-size: 0.9rem;
+            line-height: 1.1rem; 
+            
+        }
+    }
+    input{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+    }
+    .layout{
+        height: 1px;
+        background: rgba(255, 255, 255, 0.20);
+        width: 100%;
+        @include md {
+            width: 13rem;
+
+        }
+    }
+
+    .social{
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        font-size: 3.9rem;
+        @include md {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+    }
+
+    .info-bot{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+
+        @include md{
+            width: 60%;
+            flex-direction: row;
+        }
+    }
+
+    .content{
+        display: flex;
+        gap: 8rem;
+        margin-top: 2rem;
+        .content_left{
+            width: 70%;
+            .list-content{
+                font-size: 2rem;
+                // font-weight: 400;
+            }
+        }
+        .content_right{
+            flex: 1;
+            .list-about{
+                font-size: 2rem;
+
+            }
+            
+        }
+        @include md{
+            margin-top: 0;
+            .content_left{
+                margin-top: 0;
+                width: 50%;
+                .list-content{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .content_right{
+                flex: 1;
+                .list-about{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .address{
+        display: flex;
+        .ant-space-item:first-child{
+            width: 25%;
+        }
+    }
+
+    .contact{
+        display: flex;
+        .ant-space-item:first-child{
+            width: 25%;
+        }
+      
+    }
+}

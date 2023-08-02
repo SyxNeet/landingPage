@@ -1,0 +1,138 @@
+@import '../../../minxin.scss';
+
+.section1 {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100rem;
+    @include md{
+        height: auto;
+
+    }
+    .slide-item {
+        font-size: 30px;
+        height: 100%;
+        width: 100vw;
+        position: relative;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+        & p, .title { 
+            font-family: Averta Std CY;
+            font-style: normal;
+            font-weight:300;
+            position: absolute;
+            span{
+                color: #4CA757;
+                text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                font-family: Averta Std CY;
+                font-style: normal;
+                line-height: 5.5rem;
+            }
+        }
+        & .title {
+            left: 3rem;
+            top: 20%;
+            width: 80%;
+            font-size: 10rem;
+            height: fit-content;
+
+            @include md{
+                font-size: 6rem;
+                width: 40%;
+            }
+        }
+        & p{
+            width: 70%;
+            bottom: 10%;
+            color: #fff;
+            font-size: 3.6rem;
+            // left: 10rem;
+            @include md{
+                // left: 0;
+                right: 5rem;
+                width: 40%;
+                font-size: 1.7rem;
+                bottom: 10%;
+            }
+
+            
+            @media screen and (max-width : 768px){
+                left: 10rem;
+
+            }
+        }
+        
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+        position: static;
+      }
+      
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
+      }
+      
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+          display: none;
+      }
+      .swiper-pagination-bullet{
+        //   bottom: -10px;
+        @include md {
+            width: 5rem;
+            height: 5rem;
+        }
+      }
+      .swiper-pagination {
+          bottom: -3.5rem;
+      }
+}

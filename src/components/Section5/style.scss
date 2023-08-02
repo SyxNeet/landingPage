@@ -1,0 +1,72 @@
+
+@import '../../../minxin.scss';
+
+.section5{
+    width: 100%;
+    background: url(../../assets/section5/bgsc5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightgray 50%;
+     background-size: cover; 
+     padding: 10rem 0;
+     @include md {
+         padding: 8rem 0;
+     }
+
+    .contentWrapper {
+        width: 85%;
+        padding: 7rem 0;
+        flex-shrink: 0;
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(2rem);
+        @include xl{
+            // padding: 0;
+            padding: 6rem;
+        }
+
+        @include md {
+            padding: 0;
+        }
+
+        .pd{
+            padding : 4rem
+        }
+        .title{
+            color: var(--subtitle-new, #376A66);
+            text-align: center;
+            font-family: Averta Std CY;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.2rem;
+            letter-spacing: 2.16px;
+            text-transform: uppercase;
+
+            @include md{
+                font-size: 1.2rem;
+            }
+        }
+
+        .desc{
+            text-align: center;
+            font-family: Averta Std CY;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 5rem; 
+            letter-spacing: -2.3px;
+            background: var(--xanh-linear, linear-gradient(180deg, #4CA757 0%, #16A571 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            @include md{
+                font-size: 3rem;
+                line-height: 3rem; 
+                font-weight: 800;
+
+            }
+        }
+
+    }
+}

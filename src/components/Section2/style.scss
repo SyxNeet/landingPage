@@ -1,0 +1,317 @@
+@import '../../sass/common.scss';
+@import '../../../minxin.scss';
+
+.section2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+        @include md{
+            flex-direction: column;
+
+        }
+    .section-top{
+        width: 100%;
+        position: relative;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        @include md{
+            flex-direction: row;
+        }
+        .content-left{
+            width: 100%;
+            @include md{
+                width: 40%;
+
+            }
+            .about-us{
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                width: 100%;
+
+                p:first-child {
+                    font-family: Averta Std CY;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 3.1rem;
+                    line-height: 1.8rem;
+                    text-transform: uppercase;
+                    color: #376A66;
+                    @include md {
+                    font-size: 1.1rem;
+                        
+                    }
+                }
+                
+                p:last-child{
+                    font-family: Averta Std CY;
+                    width: 100%;
+                    font-size: 5.7rem;
+                    font-style: normal;
+                    font-weight: 550;
+                    line-height: 3.5rem; 
+                    background: $background-primary;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    @include md{
+                        width: 26rem;
+                        font-size: 2.7rem;
+
+                    }
+                    
+                    
+                    span:nth-child(2) {
+                        color: #3A5469;
+                        font-family: Averta Std CY;
+                        font-size: 5.7rem;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 7.5rem;
+
+                        @include md{
+                            font-size: 2.7rem;
+                            line-height: 3.5rem;
+                        }
+                    }
+                    span:first-child,
+                    span:nth-child(3),
+                    span:last-child{
+                        color: #4CA757;
+                        font-family: Averta Std CY;
+                        font-size: 8rem;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 11rem;
+                        letter-spacing: -2.3px;
+                        @include md{
+                            font-size: 3rem;
+                            line-height: 3rem;
+                        }
+                    } 
+                }
+
+            }
+
+            .seeMore{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: Averta Std CY;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 27px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: #fff;
+                    width: 143px;
+                    height: 143px;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    background: $background-primary;
+                }
+            }
+        }
+
+        .content-right{
+            flex: 1;
+                .layout-top{
+                    width: 152.345px;
+                    height: 147.865px;
+                    flex-shrink: 0;
+                    border-radius: 0px 20.09px 0px 0px;
+                    background: $background-primary
+                }
+            
+
+            @include md {
+                // display: block;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows : auto auto auto auto auto;
+                grid-gap: 0.2rem;
+                padding: 1rem;
+
+                .grid-container > div {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    text-align: center;
+                    padding: 1.5rem 0;
+                    font-size: 30px;
+                    position: relative;
+                    overflow: hidden;
+
+                    & > img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                  }
+
+                // .grid-container {
+                //     img {
+                //     width: 100%;
+                //     height: 100%;
+                //     object-fit: cover;
+                //     }
+                // }
+                    
+                .item1 {
+                    grid-column-start: 3;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end:2;
+                    width: 9.5rem;
+                    height: 9.5rem;
+                    flex-shrink: 0;
+                    border-radius: 0px 1.4rem 0px 0px;
+                    background: $background-primary
+                  }
+                  .item2 {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 3;
+                    grid-row-end:3;
+                    display: flex;
+                    justify-content: flex-end;
+                    // width: 19.5rem;
+                    position: relative;
+                    bottom: 2.7rem;
+                    height: 21.8rem;
+                    @include md{
+                        // width: 16.5rem;
+                        // height: 18.4rem;
+                        // bottom: 0;
+                    }
+                  }
+                  .item3{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end:3;
+                    display: flex;
+                    height: fit-content;
+                    img{
+                        width: 100%;
+                    }
+                  }
+                  .item4{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    grid-row-end:4;
+                    width: 11.7rem;
+                    height: 11.7rem;
+                    flex-shrink: 0;
+                    border-radius: 0 0 0 1.4rem;
+                    opacity: 0.1;
+                    background: #3A5469;
+                    display: flex;
+                    position: relative;
+                    bottom: 2.7rem;
+                  }
+                  .item5{
+                    grid-column-start: 3;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end:3;
+                    width: 17.9rem;
+                    height: 30.6rem;
+                    @include md{
+                        width: 15rem;
+                        height: 25.8rem;
+
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                  }
+                  .item6{
+                    grid-column-start: 3;
+                    grid-column-end: 3;
+                    grid-row-start: 4;
+                    grid-row-end:5;
+                    width: 7rem;
+                    height: 7rem;
+                    flex-shrink: 0;
+                    border-radius: 0px 0px 1.4rem 0px;
+                    opacity: 0.1;
+                    background: #3A5469;
+                    display: flex;
+                    position: relative;
+                    bottom: 9.6rem;
+                  }
+                  .item7{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end:3;
+                    display: flex;
+                    width: 38rem;
+                    height: 27.5rem;
+                    @include md {
+                        width: 32.3rem;
+                        height: 23.2rem;
+                    }
+                  }
+
+                  .react-reveal{
+                      width: fit-content;
+                  }
+              }
+        }
+    }
+    
+    .section-bot{
+        width: 100%;
+        margin-left: 10px;
+
+        p{
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 9rem; 
+            text-transform: uppercase;
+
+            span{
+                color: $text-second;
+                background-clip: text;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 9rem;
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+    
+}
+
+.photo-list {
+    width: 100%;
+    list-style: none;
+    & .photo-item-sc2 {
+        display: flex;
+        width: 20rem;
+        @include md{
+            width: 15.8rem;
+        }
+        & img{
+            display: flex;
+            width: 100%;
+        }
+    }
+}
