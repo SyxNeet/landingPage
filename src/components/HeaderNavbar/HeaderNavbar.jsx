@@ -14,7 +14,7 @@ function HeaderNavbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    const [prevScrollpos, setPrevScrollpos] = useState(0);
+    // const [prevScrollpos, setPrevScrollpos] = useState(0);
     const openMobileMenu = () => {
         setMobileMenu(true)
     }
@@ -22,23 +22,7 @@ function HeaderNavbar() {
         setIsOpen(!isOpen)
     }
 
-    useEffect(() => {
-        function handleScroll() {
-            const currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById('navbar').style.top = '0';
-            } else {
-                document.getElementById('navbar').style.top = '-100%';
-            }
-            setPrevScrollpos(currentScrollPos);
-        }
 
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [prevScrollpos]);
     const navItem = [
         { type: 'Home', key: 'home' },
         {
@@ -74,11 +58,22 @@ function HeaderNavbar() {
         { type: 'Contact', key: 'contact' }
     ]
 
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementsByClassName("headerNav")[0].style.top = "0";
+        } else {
+            document.getElementsByClassName("headerNav")[0].style.top = "-126px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
     return (
-        <div className='sc1'>
+        <div id='navbar' className='sc1'>
 
             <ContentWrapper >
-                <div id='navbar' className={`headerNav ${mobileMenu ? 'mobileViews' : ''}`}>
+                <div className={`headerNav ${mobileMenu ? 'mobileViews' : ''}`}>
                     <div className='headerNav-top'>
                         <img src={logo} alt="logo" />
                         <span>+00 9875446</span>
@@ -98,9 +93,9 @@ function HeaderNavbar() {
                             <>
                                 <li className={`nav_${index}`}>
                                     {item.subItems ?
-                                        (<a className='list-type' href='#' onClick={handleOpenModal} key={item.key}>{item.type}<DownOutlined onClick={handleOpenModal} /><span></span></a>)
+                                        (<a className='list-type' href='#' onClick={handleOpenModal} key={item.key}>{item.type}<DownOutlined onClick={handleOpenModal} /><span className='line'></span></a>)
                                         : (<>
-                                            <div className='list-type' key={item.key}>{item.type}</div>
+                                            <a className='list-type' key={item.key}>{item.type}<span className='line'></span></a>
 
                                         </>)}
                                     {index == 1 && (
@@ -154,8 +149,6 @@ function HeaderNavbar() {
                                                     </div>
                                                 </ul>
                                             </div>
-
-
                                         </div>
                                     )}
                                 </li>
@@ -174,7 +167,6 @@ function HeaderNavbar() {
                                 <p>DISCLAIMER</p>
                                 <p>DOWNLOAD PROFILE</p>
                             </div>
-
                         </div>
 
                         <div className='about_contact_mobile'>

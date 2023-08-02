@@ -18,7 +18,7 @@ export const Slide = ({ title, subTitle, desc, bg }) => {
             <p className='title'>{title}
                 <span>{subTitle}</span>
             </p>
-            <p>{desc}</p>
+            <p className='descs1'>{desc}</p>
         </Container>
     );
 }
