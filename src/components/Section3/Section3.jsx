@@ -58,7 +58,7 @@ function Section3() {
         }
     ]
 
-    const pagination = slides.length
+    // const pagination = slides.length
     return (
         <div className='section3'>
             <ContentWrapper>
@@ -69,7 +69,7 @@ function Section3() {
                             <p>WE ARE <br /> <span>A Member Of</span></p>
                         </Space>
                         <Space className='desc-sc3'>
-                            <span>{slides[selected].desc}</span>
+                            <p>{slides[selected].desc}</p>
                         </Space>
                     </Col>
 
@@ -89,7 +89,7 @@ function Section3() {
                     </Col>
 
                 </Row>
-                <div style={{ display: 'flex', gap: '5px' }}>
+                <div style={{ display: 'flex', gap: '1rem' }}>
                     <button
                         onClick={() => { handleSlideChange(selected - 1) }}
                         disabled={selected == 0}
@@ -122,21 +122,21 @@ function Section3() {
                                 <p>FOUNDED YEAR</p>
                             </div>
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={6} >
+                        <Col xs={12} sm={12} md={6} lg={6} className='mb-spr2' >
                             <div className='count-number'>
                                 <span className='number'>{count}</span>
                                 <span className='plus'>+</span>
                                 <p>PERSONEL</p>
                             </div>
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={6} >
+                        <Col xs={12} sm={12} md={6} lg={6} className='mt8' >
                             <div className='count-number'>
                                 <span className='number'>{count}</span>
                                 <span className='plus'>+</span>
                                 <p>PROJECTS</p>
                             </div>
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={6} >
+                        <Col xs={12} sm={12} md={6} lg={6} className='mt8 mb-spr4'>
                             <div className='count-number'>
                                 <span className='number'>{count}</span>
                                 <span className='plus'>+</span>
@@ -145,8 +145,8 @@ function Section3() {
                         </Col>
                     </Row>
                 </Row>
-            </ContentWrapper>
-        </div>
+            </ContentWrapper >
+        </div >
     )
 }
 export default Section3

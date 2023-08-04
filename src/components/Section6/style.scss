@@ -3,6 +3,14 @@
 @import '../../../minxin.scss';
 .section6{
 
+    .contentWrapper{
+        padding: 6.3rem 25px;
+
+        @include md{
+            padding: 6.3rem 60px;
+        }
+    }
+
     .title{
         margin-top: 1rem;
         font-size: 1.3rem;

@@ -9,7 +9,6 @@ export const Slide = ({ title, subTitle, desc, bg }) => {
         background-size: cover;
         background-position: center;
         width: 100%;
-        padding: 18rem 0;
   }
 `;
 

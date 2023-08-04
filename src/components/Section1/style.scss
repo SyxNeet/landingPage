@@ -6,16 +6,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100rem;
+    // height: 100rem;
     @include md{
         height: auto;
 
     }
     .slide-item {
-        font-size: 30px;
+        font-size: 1.8rem;
         height: 100%;
         width: 100vw;
         position: relative;
+        padding: 52rem 0;
+        @include md {
+            padding: 23.6rem 0;
+        }
         & img {
             width: 100%;
             height: auto;
