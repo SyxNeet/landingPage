@@ -37,12 +37,6 @@
             }
         }
         & .title {
-          animation-fill-mode: both;
-          animation-duration: 1000ms;
-          animation-delay: 0ms;
-          animation-iteration-count: 1;
-          opacity: 1;
-          animation-name: bottom-top;
             left: 3rem;
             top: 30%;
             width: 90%;
@@ -59,12 +53,6 @@
             }
         }
         & .descs1{
-            animation-fill-mode: both;
-            animation-duration: 1000ms;
-            animation-delay: 0ms;
-            animation-iteration-count: 1;
-            opacity: 1;
-            animation-name: right-left;
             width: 70%;
             bottom: 20%;
             color: #fff;
@@ -173,26 +161,4 @@
 
 .descs1{
     text-align: start;
-}
-
-@keyframes bottom-top {
-  0% {
-    opacity: 0;
-    transform: translate3d(0px, 100%, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes right-left {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0px, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
 }

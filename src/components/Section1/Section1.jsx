@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +11,7 @@ import active1 from "../../assets/active_slide1.png";
 import active2 from "../../assets/active_slide2.png";
 import active3 from "../../assets/active_slide3.png";
 
-import { Slide } from "./Slide";
+import Slide from "./Slide";
 import "./style.scss";
 import styled from "styled-components";
 
@@ -23,24 +23,27 @@ function Section1() {
     setProgress((currentOnTotalTime / 15000) * 100);
   };
 
-  const slides = [
-    {
-      title: "Building For <br /><span>Green</span> Energy",
-      desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
-      bg: bg1,
-    },
-    {
-      title: "Victory <br /><span>Park</span>",
-      subTitle: "Park",
-      desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
-      bg: bg2,
-    },
-    {
-      title: "Site <br /><span>Conditions</span>",
-      desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
-      bg: bg3,
-    },
-  ];
+  const slides = useMemo(
+    () => [
+      {
+        title: "Building For <br /><span>Green</span> Energy",
+        desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
+        bg: bg1,
+      },
+      {
+        title: "Victory <br /><span>Park</span>",
+        subTitle: "Park",
+        desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
+        bg: bg2,
+      },
+      {
+        title: "Site <br /><span>Conditions</span>",
+        desc: "We provide types of services for Wind Farm projects in Vietnam. With 153+ MW of Wind turbines installed since established, we are confident to provide the best services to our customer.",
+        bg: bg3,
+      },
+    ],
+    []
+  );
   const handleSlideChange = (swiper) => {
     setCurrentSlide(swiper.activeIndex);
   };
@@ -49,10 +52,10 @@ function Section1() {
       <CustomSwiper
         spaceBetween={30}
         centeredSlides={true}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
