@@ -14,7 +14,6 @@ function HeaderNavbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    // const [prevScrollpos, setPrevScrollpos] = useState(0);
     const openMobileMenu = () => {
         setMobileMenu(true)
     }

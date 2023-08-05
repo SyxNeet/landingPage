@@ -7,7 +7,6 @@
     }
         position: absolute;
         z-index: 2;
-        // width: 100%;
         
         .headerNav{
             position: fixed;
@@ -19,11 +18,11 @@
             &:hover {
                 background: transparent;
             }
-            @include md{
-                &:hover {
-                    background: $text-second;
-                }
-            }
+            // @include md{
+            //     &:hover {
+            //         background: $text-second;
+            //     }
+            // }
             .subnav {
                 position: absolute;
                 height: 31rem;
