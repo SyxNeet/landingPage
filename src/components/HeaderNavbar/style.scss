@@ -7,7 +7,6 @@
     }
         position: absolute;
         z-index: 2;
-        // width: 100%;
         
         .headerNav{
             position: fixed;
@@ -24,6 +23,11 @@
                     background:linear-gradient(180deg, #4CA757 0%, #16A571 100%);
                 }
             }
+            // @include md{
+            //     &:hover {
+            //         background: $text-second;
+            //     }
+            // }
             .subnav {
                 position: absolute;
                 height: 31rem;
@@ -340,3 +344,12 @@
         }
     }
 }
+
+.nav_1:hover + .headerNav-bot + .headerNav{
+    background: #000;
+}
+
+// .headerNav.scrolled {
+//     background: #fff;
+//     color: black;
+// }

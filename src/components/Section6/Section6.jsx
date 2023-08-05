@@ -27,8 +27,8 @@ function Section6() {
 
         <div className='slides'>
           <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
+            slidesPerView={1.2}
+            spaceBetween={12}
             breakpoints={{
               640: {
                 slidesPerView: 2,

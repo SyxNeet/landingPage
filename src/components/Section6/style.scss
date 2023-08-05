@@ -4,7 +4,7 @@
 .section6{
 
     .contentWrapper{
-        padding: 6.3rem 25px;
+        padding: 6.3rem 0 6.3rem 12px;
 
         @include md{
             padding: 6.3rem 60px;
@@ -14,12 +14,16 @@
     .title{
         margin-top: 1rem;
         color: #376A66;
-        font-size: 1.3rem;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 700;
         line-height: 2.7rem;
         letter-spacing: 0.216rem;
         text-transform: uppercase;
+
+        @include md {
+            font-size: 1.3rem;
+        }
     }
     
 
@@ -33,30 +37,46 @@
                 // background-clip: text;
                 // -webkit-background-clip: text;
                 // -webkit-text-fill-color: transparent;
-                font-weight: 600;
                 color: $text-primary ;
-                font-size: 3.3rem;
+                font-size: 5.3rem;
                 font-style: normal;
-                font-weight: 800;
-                letter-spacing: -3px;
+                font-weight: 700;
+                letter-spacing: -1px;
+                line-height: 35px;
+
+                @include md {
+                    font-size: 3.3rem;
+
+                }
             }
         }
 
         .sub-title2{
-            width: 10rem;
-            height: 3rem;
+            width: 12rem;
+            height: 4.5rem;
             background: $background-primary;
             border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
+            // font-size: 18px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 27px;
+            margin-right: 1rem;
+
+            @include md {
+                width: 10rem;
+                height: 3rem;
+                font-weight: 700;
+                margin-right: 0;
+            }
             p{
                 color: #fff;
-                font-size: 0.9rem;
+                font-size: 1.5rem;
+                @include md {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
@@ -70,12 +90,24 @@
         .swiper {
             padding-bottom: 7rem;
         }
+
+        .swiper-wrapper {
+            margin-bottom: 5rem;
+            @include md {
+                margin-bottom: 0;
+            }
+        }
         .swiper-pagination {
             width: 80%;
             background-color: white !important;
             top: auto;
-            bottom: 1.5rem;
-            left: 15%;
+            bottom: 5.5rem;
+            left: 22%;
+            @include md {
+                left: 15%;
+                bottom: 2.5rem;
+
+            }
             .swiper-pagination-progressbar-fill {
                 background-color: #4CA757;
             }
@@ -89,17 +121,26 @@
             border: 1px solid #4CA757;
         }
         .swiper-button-prev {
-            bottom: 0;
+            bottom: 1.5rem;
             top: auto;
+            
         }
         .swiper-button-next {
-            bottom: 0;
-            left: 5rem;
+            bottom: 1.5rem;
+            left: 9rem;
             top: auto;
+
+            @include md {
+                left: 5rem;
+            }
         }
         .swiper-button-prev::after, 
         .swiper-button-next::after {
-            font-size: 1.2rem;
+            font-size: 2.2rem;
+            @include md {
+                font-size: 1.2rem;
+
+            }
         }
         .swiper-button-disabled {
             background-color: white;

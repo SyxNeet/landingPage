@@ -1,6 +1,13 @@
 @import '../../sass/common.scss';
 @import '../../../minxin.scss';
 
+
+.contentWrapper{
+
+    @include md {
+        padding: 3.5rem 60px;
+    }
+}
 .section2{
     width: 100%;
     height: 100%;
@@ -56,11 +63,12 @@
                     width: 100%;
                     font-size: 5.7rem;
                     font-style: normal;
-                    font-weight: 550;
+                    font-weight: 800;
                     line-height: 3.5rem; 
                     background: $background-primary;
                     background-clip: text;
                     -webkit-background-clip: text;
+                    color: #3A5469;
                     @include md{
                         width: 26rem;
                         font-size: 2.7rem;
@@ -187,12 +195,12 @@
                     justify-content: flex-end;
                     // width: 19.5rem;
                     position: relative;
-                    bottom: 2.7rem;
+                    bottom: 3rem;
                     height: 21.8rem;
                     @include md{
                         // width: 16.5rem;
                         // height: 18.4rem;
-                        // bottom: 0;
+                        bottom: 2.7rem;
                     }
                   }
                   .item3{
@@ -219,7 +227,12 @@
                     background: #3A5469;
                     display: flex;
                     position: relative;
-                    bottom: 2.7rem;
+                    bottom: 3.4rem;
+                    left: 1.6rem;
+                    @include md {
+                        bottom: 2.7rem;
+                        left: 0;
+                    }
                   }
                   .item5{
                     grid-column-start: 3;
@@ -276,22 +289,45 @@
     .section-bot{
         width: 100%;
         margin-left: 10px;
+        font-weight: 800;
+        -webkit-text-stroke: 1px #16A571;
+        color: transparent;
+        margin-bottom: 6rem;
+        @include md{
+            margin-bottom: 1rem;
+        }
 
         p{
-            font-size: 3rem;
+            font-size: 4rem;
             font-style: normal;
             font-weight: 800;
             line-height: 9rem; 
             text-transform: uppercase;
+            // font-size: 100px;
+            // font-style: normal;
+            // font-weight: 800;
+            // line-height: 150px;
+            // text-transform: uppercase;
+            @include md {
+                font-size: 4.5rem;
+            }
 
             span{
                 color: $text-second;
                 background-clip: text;
-                font-size: 3rem;
+                font-size: 4rem;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 9rem;
                 text-transform: uppercase;
+                @include md {
+                    font-size: 4.5rem;
+                }
+                // font-size: 100px;
+                // font-style: normal;
+                // font-weight: 800;
+                // line-height: 150px;
+                // text-transform: uppercase;
             }
         }
         

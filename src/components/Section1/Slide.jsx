@@ -2,8 +2,7 @@ import { memo } from "react";
 import { Fade } from "react-reveal";
 import styled from "styled-components";
 
-// eslint-disable-next-line react-refresh/only-export-components
-const Slide = ({ title, subTitle, desc, bg }) => {
+const Slide = ({ title, desc, bg }) => {
   const Container = styled.div`
         background-image: url(${bg});
         background-size: cover;
@@ -24,5 +23,4 @@ const Slide = ({ title, subTitle, desc, bg }) => {
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export default memo(Slide);
