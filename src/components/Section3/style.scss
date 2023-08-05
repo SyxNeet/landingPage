@@ -2,10 +2,10 @@
 @import '../../../minxin.scss';
 .section3{
     .contentWrapper {
-        padding: 6.3rem 25px;
+        padding: 6.3rem 12px;
         @include md {
 
-            padding: 6.3rem 60px 3rem;
+            padding: 6.3rem 60px 1rem;
         }
     }
     width: 100%;

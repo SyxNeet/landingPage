@@ -18,7 +18,7 @@
         position: relative;
         padding: 52rem 0;
         @include md {
-            padding: 23.6rem 0;
+            padding: 20rem 0;
         }
         & img {
             width: 100%;
@@ -37,8 +37,8 @@
             }
         }
         & .title {
-            left: 3rem;
-            top: 30%;
+            left: 2rem;
+            top: 25%;
             width: 90%;
             font-size: 10rem;
             text-align: start;
@@ -50,6 +50,7 @@
             @include md{
                 font-size: 6rem;
                 width: 40%;
+                left: 4rem;
             }
         }
         & .descs1{
@@ -62,14 +63,14 @@
                 width: 40%;
                 font-size: 1.7rem;
                 bottom: 20%;
-                width: 70%;
+                width: 50%;
 
             }
             @media screen and (max-width : 360px){
               bottom:16%
             }
             @media screen and (max-width : 768px){
-                left: 4rem;
+                left: 2rem;
             }
         }
         

@@ -2,10 +2,12 @@
 @import '../../../minxin.scss';
 
 .section4{
-    background: lightgray 0px -1027.44px / 100% 305.677% no-repeat;
-    padding-top: 5rem;
+    // background: lightgray 0px -1027.44px / 100% 305.677% no-repeat;
+    padding-top: 7rem;
 
     .contentWrapper:first-child {
+        padding: 0 60px;
+        margin-bottom: -4rem;
         display: none;
         @include md {
             display: block;
@@ -15,7 +17,7 @@
             grid-template-columns: auto auto auto auto;
             grid-template-rows : auto auto auto auto;
             grid-gap: 0.2rem;
-            padding: 1rem;
+            // padding: 1rem;
     
             .item1,
             .item2,
@@ -149,8 +151,36 @@
 
     .contentWrapper:nth-child(2){
         display: block;
+        padding: 6.3rem 0 6.3rem 12px;
         @include md{
             display: none;
+        }
+
+        .title{
+          p{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 1.68px;
+            text-transform: uppercase;  
+            color: #376A66;
+          }
+        }
+
+        .subtitle{
+          margin-bottom: 6rem;
+          p{
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 35px;
+            letter-spacing: -1.5px;
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-transform: capitalize;
+            color: $text-second;
+          }
         }
 
         .swiper-slide{
@@ -188,24 +218,39 @@
     }
 
     .contentWrapper:last-child {
+      padding: 0 60px;
+
+      .sec4-bot{
+          width: 100%;
+          margin-left: 10px;
+          font-weight: 800;
+          -webkit-text-stroke: 1px #16A571;
+          color: transparent;
+          margin-bottom: 5rem;
+          @include md{
+              margin-bottom: 4rem;
+          }
+      }
         p{
-            // font-family: Averta Std CY;
             font-size: 3rem;
             font-style: normal;
             font-weight: 800;
             line-height: 9rem; 
             text-transform: uppercase;
-
+            @include md{
+                font-size: 4.5rem;
+            }
             span{
                 color: $text-second;
                 background-clip: text;
-                // -webkit-text-fill-color: transparent;
-                // font-family: Averta Std CY;
                 font-size: 3rem;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 9rem;
                 text-transform: uppercase;
+                @include md {
+                    font-size: 4.5rem;
+                }
             }
         }
     }

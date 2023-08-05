@@ -115,7 +115,10 @@ footer{
     .content{
         display: flex;
         gap: 8rem;
-        margin-top: 2rem;
+        margin-top: 8rem;
+        @include md {
+            margin-top: 2rem;
+        }
         .content_left{
             width: 70%;
             .list-content{
@@ -156,16 +159,22 @@ footer{
     }
 
     .address{
-        font-size: 1rem;
+        font-size: 1.5rem;
         display: flex;
         .ant-space-item:first-child{
             width: 25%;
         }
+        @include md {
+            font-size: 1rem;
+        }
     }
 
     .contact{
-        font-size: 1rem;
+        font-size: 1.5rem;
         display: flex;
+        @include md {
+            font-size: 1rem;
+        }
         .ant-space-item:first-child{
             width: 25%;
         }

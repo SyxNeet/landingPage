@@ -62,10 +62,13 @@ function HeaderNavbar() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             document.getElementsByClassName("headerNav")[0].style.top = "0";
+            document.getElementsByClassName("headerNav")[0].classList.add('scrolled')
         } else {
             document.getElementsByClassName("headerNav")[0].style.top = "-126px";
         }
         prevScrollpos = currentScrollPos;
+
+
     }
 
     return (

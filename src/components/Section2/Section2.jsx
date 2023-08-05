@@ -38,27 +38,35 @@ function Section2() {
           </div>
           <div className='content-right'>
             <div className='grid-container'>
+              {/* <Fade right> */}
               <div className='item1'></div>
+              {/* </Fade> */}
 
-              <Fade></Fade>
               <div className='item2'>
-                <img src={img4} alt='' />
+                <Fade right>
+                  <img src={img4} alt='' />
+                </Fade>
               </div>
-
               <div className='item3'>
-                <img src={img1} alt='' />
+                <Fade left>
+                  <img src={img1} alt='' />
+                </Fade>
               </div>
 
               <div className='item4'></div>
 
               <div className='item5'>
-                <img src={img3} alt='' />
+                <Fade right>
+                  <img src={img3} alt='' />
+                </Fade>
               </div>
 
               <div className='item6'></div>
 
               <div className='item7'>
-                <img src={imgCenter} alt='' />
+                <Fade left>
+                  <img src={imgCenter} alt='' />
+                </Fade>
               </div>
             </div>
           </div>
@@ -74,6 +82,9 @@ function Section2() {
               </>
             )}
           </Ticker>
+          {/* <p>
+            offshore <span> Energy </span> installation
+          </p> */}
         </div>
       </div>
     </ContentWrapper>

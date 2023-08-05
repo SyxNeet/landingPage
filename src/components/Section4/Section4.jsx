@@ -18,13 +18,8 @@ import Ticker from "react-ticker";
 import { Image } from "antd";
 
 function Section4() {
-  // const masonryOptions = {
-  //     fitWidth: false,
-  //     columnWidth: 300,
-  //     gutter: 15,
-  //     itemSelector: ".photo-item",
-  // };
-  const listImg = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+
+  const listImg = [img5, img2, img3, img4, img5, img6, img7, img8, img9];
   return (
     <div className='section4'>
       <ContentWrapper>
@@ -90,17 +85,42 @@ function Section4() {
       </ContentWrapper>
 
       <ContentWrapper>
-        <Swiper className='mySwiper'>
-          {listImg.map((img, index) => (
-            <SwiperSlide key={index}>
-              <Image preview={true} src={img} alt='' />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div>
+          <div className='title'>
+            <p>we provide service</p>
+          </div>
+
+          <div className='subtitle'>
+            <p>epowring Sustainability</p>
+          </div>
+
+          <Swiper className='mySwiper'
+            slidesPerView={1.2}
+            spaceBetween={12}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+
+          >
+            {listImg.map((img, index) => (
+              <SwiperSlide key={index}>
+                <Image style={{ objectFit: 'cover' }} preview={true} src={img} alt='' />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </ContentWrapper>
 
       <ContentWrapper>
-        <div style={{ marginLeft: "10px" }}>
+        <div className='sec4-bot' style={{ marginLeft: "10px" }}>
           <Ticker>
             {() => (
               <>
