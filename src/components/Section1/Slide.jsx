@@ -1,10 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-
+import React from "react";
+import { Fade } from "react-reveal";
+import styled from "styled-components";
 
 export const Slide = ({ title, subTitle, desc, bg }) => {
-
-    const Container = styled.div`
+  const Container = styled.div`
         background-image: url(${bg});
         background-size: cover;
         background-position: center;
@@ -12,12 +11,10 @@ export const Slide = ({ title, subTitle, desc, bg }) => {
   }
 `;
 
-    return (
-        <Container className="slide-item">
-            <p className='title'>{title}
-                <span>{subTitle}</span>
-            </p>
-            <p className='descs1'>{desc}</p>
-        </Container>
-    );
-}
+  return (
+    <Container className='slide-item'>
+      <div className='title' dangerouslySetInnerHTML={{ __html: title }}></div>
+      <p className='descs1'>{desc}</p>
+    </Container>
+  );
+};

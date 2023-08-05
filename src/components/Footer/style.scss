@@ -45,7 +45,7 @@ footer{
         // font-family: Averta Std CY;
         font-size: 2rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 1.3px; 
         text-transform: uppercase;
 
@@ -58,7 +58,7 @@ footer{
     .title-bot{
         width: 60%;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 1.9rem;
         line-height: 2.5rem;
         opacity: 0.8;
@@ -73,6 +73,9 @@ footer{
         border: none;
         outline: none;
         color: #fff;
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.50);
+        }
     }
     .layout{
         height: 1px;
@@ -104,8 +107,8 @@ footer{
         flex-direction: column;
 
         @include md{
-            width: 60%;
             flex-direction: row;
+            gap: 10rem;
         }
     }
 
@@ -121,6 +124,7 @@ footer{
             }
         }
         .content_right{
+            min-width: 10rem;
             flex: 1;
             .list-about{
                 font-size: 2rem;
@@ -131,25 +135,28 @@ footer{
         @include md{
             margin-top: 0;
             .content_left{
+                line-height: 2rem;
                 margin-top: 0;
                 width: 50%;
                 .list-content{
                     font-size: 1rem;
-                    font-weight: 400;
+                    font-weight: 600;
                 }
             }
 
             .content_right{
+                line-height: 2rem;
                 flex: 1;
                 .list-about{
                     font-size: 1rem;
-                    font-weight: 400;
+                    font-weight: 600;
                 }
             }
         }
     }
 
     .address{
+        font-size: 1rem;
         display: flex;
         .ant-space-item:first-child{
             width: 25%;
@@ -157,6 +164,7 @@ footer{
     }
 
     .contact{
+        font-size: 1rem;
         display: flex;
         .ant-space-item:first-child{
             width: 25%;

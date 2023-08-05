@@ -13,9 +13,15 @@
 
     .title{
         margin-top: 1rem;
+        color: #376A66;
         font-size: 1.3rem;
-        color: #4CA757;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.7rem;
+        letter-spacing: 0.216rem;
+        text-transform: uppercase;
     }
+    
 
     .info-feature{
         display: flex;
@@ -27,10 +33,12 @@
                 // background-clip: text;
                 // -webkit-background-clip: text;
                 // -webkit-text-fill-color: transparent;
-                text-transform: capitalize;
-                font-size: 3.6rem;
                 font-weight: 600;
                 color: $text-primary ;
+                font-size: 3.3rem;
+                font-style: normal;
+                font-weight: 800;
+                letter-spacing: -3px;
             }
         }
 
@@ -38,44 +46,90 @@
             width: 10rem;
             height: 3rem;
             background: $background-primary;
-            border-radius: 15px;
+            border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27px;
             p{
                 color: #fff;
                 font-size: 0.9rem;
             }
         }
     }
+    
 
+}
+
+#section6 {
+    .slides {
+        padding-bottom: 70;
+        .swiper {
+            padding-bottom: 7rem;
+        }
+        .swiper-pagination {
+            width: 80%;
+            background-color: white !important;
+            top: auto;
+            bottom: 1.5rem;
+            left: 15%;
+            .swiper-pagination-progressbar-fill {
+                background-color: #4CA757;
+            }
+        }
+        .swiper-button-prev, 
+        .swiper-button-next {
+            padding: 1.4rem 1.5rem;
+            border-radius: 100%;
+            color: white;
+            background-color: #4CA757;
+            border: 1px solid #4CA757;
+        }
+        .swiper-button-prev {
+            bottom: 0;
+            top: auto;
+        }
+        .swiper-button-next {
+            bottom: 0;
+            left: 5rem;
+            top: auto;
+        }
+        .swiper-button-prev::after, 
+        .swiper-button-next::after {
+            font-size: 1.2rem;
+        }
+        .swiper-button-disabled {
+            background-color: white;
+            color: #4CA757;
+        }
+    }
+    
 }
 
 .about-item{
     .img{
-        background: $text-primary ;
         img{
             width: 100%;
             height: 100%;
         }
     }
     .info-bot{
-        background:$background-primary;
+        background: white;
         .date{
-            color: #fff;
             opacity: 0.6;
             font-size: 4.3rem;
             padding: 0 1rem;
 
             @include md {
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
         }
 
             .desc1{
                 width: 100%;
-                color: #fff;
                 font-weight: 500;
                 margin: 1rem 0;
                 padding: 0 1rem;
@@ -101,5 +155,14 @@
                 }
             }
         
+    }
+}
+.swiper-slide-active {
+    .img {
+        background: $text-primary;
+    }
+    .info-bot, .desc1 {
+        background: #4CA757;
+        color: #fff;
     }
 }

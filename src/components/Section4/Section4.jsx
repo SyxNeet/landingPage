@@ -1,110 +1,119 @@
-import React from 'react'
-import './style.scss'
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import "./style.scss";
+import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import img1 from '../../assets/section4/img1.png';
-import img2 from '../../assets/section4/img2.png';
-import img3 from '../../assets/section4/img3.png';
-import img4 from '../../assets/section4/img4.png';
-import img5 from '../../assets/section4/img5.png';
-import img6 from '../../assets/section4/img6.png';
-import img7 from '../../assets/section4/img7.png';
-import img8 from '../../assets/section4/img8.png';
-import img9 from '../../assets/section4/img9.png';
-import img10 from '../../assets/section4/img10.png';
-import ContentWrapper from '../contentWrapper/ContentWrapper';
+import img1 from "../../assets/section4/img1.png";
+import img2 from "../../assets/section4/img2.png";
+import img3 from "../../assets/section4/img3.png";
+import img4 from "../../assets/section4/img4.png";
+import img5 from "../../assets/section4/img5.png";
+import img6 from "../../assets/section4/img6.png";
+import img7 from "../../assets/section4/img7.png";
+import img8 from "../../assets/section4/img8.png";
+import img9 from "../../assets/section4/img9.png";
+import img10 from "../../assets/section4/img10.png";
+import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Ticker from "react-ticker";
-import { Image } from 'antd';
-
-
+import { Image } from "antd";
 
 function Section4() {
-    // const masonryOptions = {
-    //     fitWidth: false,
-    //     columnWidth: 300,
-    //     gutter: 15,
-    //     itemSelector: ".photo-item",
-    // };
-    const listImg = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
-    return (
-        <div className='section4'>
+  // const masonryOptions = {
+  //     fitWidth: false,
+  //     columnWidth: 300,
+  //     gutter: 15,
+  //     itemSelector: ".photo-item",
+  // };
+  const listImg = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  return (
+    <div className='section4'>
+      <ContentWrapper>
+        <div className='grid-container'>
+          <div className='item1'>
             <Fade left>
-                <ContentWrapper>
-                    <div class="grid-container">
-                        <div class="item1">
-                            <img src={img2} alt="" />
-                        </div>
-
-                        <div class="item2">
-                            <img src={img8} alt="" />
-                        </div>
-
-                        <div class="item3">
-                            <img src={img7} alt="" />
-                        </div>
-
-                        <div class="item4">
-                            <img src={img5} alt="" />
-                        </div>
-
-                        <div class="item5">
-                            <img src={img6} alt="" />
-                        </div>
-
-                        <div class="item6">
-                            <img src={img3} alt="" />
-                        </div>
-
-                        <div class="item7">
-                            <img src={img4} alt="" />
-                        </div>
-                        <div class="item8">
-                            <img src={img1} alt="" />
-                        </div>
-                        <div class="item9">
-                            <img src={img2} alt="" />
-                        </div>
-                        <div class="item10">
-                            <img src={img9} alt="" />
-                        </div>
-                        <div class="item11">
-
-                        </div>
-                    </div>
-
-                </ContentWrapper>
+              <img src={img2} alt='' />
             </Fade>
+          </div>
 
+          <div className='item2'>
+            <Fade top>
+              <img src={img8} alt='' />
+            </Fade>
+          </div>
 
-            <ContentWrapper>
-                <Swiper className="mySwiper">
-                    {listImg.map((img, index) => (
-                        <SwiperSlide key={index}>
-                            <Image preview={true} src={img} alt="" />
-                        </SwiperSlide>
+          <div className='item3'>
+            <Fade top>
+              <img src={img7} alt='' />
+            </Fade>
+          </div>
 
-                    ))}
-                </Swiper>
-            </ContentWrapper>
+          <div className='item4'>
+            <Fade right>
+              <img src={img5} alt='' />
+            </Fade>
+          </div>
 
+          <div className='item5'>
+            <Fade left>
+              <img src={img6} alt='' />
+            </Fade>
+          </div>
 
-            <ContentWrapper>
-                <div style={{ marginLeft: '10px' }}>
-                    <Ticker>
-                        {() => (
-                            <>
-                                <p>
-                                    building for <span> green  </span> energy
-                                </p>
-                            </>
-                        )}
-                    </Ticker>
-                </div>
+          <div className='item6'>
+            <Fade top>
+              <img src={img3} alt='' />
+            </Fade>
+          </div>
 
-            </ContentWrapper>
+          <div className='item7'>
+            <Fade top>
+              <img src={img4} alt='' />
+            </Fade>
+          </div>
+          <div className='item8'>
+            <Fade right>
+              <img src={img1} alt='' />
+            </Fade>
+          </div>
+          <div className='item9'>
+            <Fade bottom>
+              <img src={img2} alt='' />
+            </Fade>
+          </div>
+          <div className='item10'>
+            <Fade bottom>
+              <img src={img9} alt='' />
+            </Fade>
+          </div>
+          <div className='item11'></div>
         </div>
-    )
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <Swiper className='mySwiper'>
+          {listImg.map((img, index) => (
+            <SwiperSlide key={index}>
+              <Image preview={true} src={img} alt='' />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <div style={{ marginLeft: "10px" }}>
+          <Ticker>
+            {() => (
+              <>
+                <p>
+                  building for <span> green </span> energy
+                </p>
+              </>
+            )}
+          </Ticker>
+        </div>
+      </ContentWrapper>
+    </div>
+  );
 }
 
-export default Section4
+export default Section4;
