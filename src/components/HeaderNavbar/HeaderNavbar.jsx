@@ -58,10 +58,15 @@ function HeaderNavbar() {
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
+    console.log(currentScrollPos);
     if (prevScrollpos > currentScrollPos) {
       const headerNav = document.getElementsByClassName("headerNav")[0];
       headerNav.style.top = "0";
       headerNav.style.background = "linear-gradient(180deg, #4CA757 0%, #16A571 100%)";
+      // headerNav.classList.add = 'scrolled'
+      if (currentScrollPos === 0) {
+        headerNav.style.background = 'transparent'
+      }
     } else {
       document.getElementsByClassName("headerNav")[0].style.top = "-172px";
     }
@@ -170,6 +175,7 @@ function HeaderNavbar() {
           </nav>
         </div>
       </ContentWrapper>
+
     </div>
   );
 }

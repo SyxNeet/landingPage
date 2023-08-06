@@ -209,8 +209,18 @@
 }
 .mb-spr4{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    position: relative;
+    left: 2rem;
     @include md {
         justify-content: flex-start;
+        left: 0;
+    }
+}
+
+#flag{
+    margin-top: 3rem;
+    @include md {
+        margin-top: 0;
     }
 }

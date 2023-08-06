@@ -3,7 +3,10 @@
 
 .section4{
     // background: lightgray 0px -1027.44px / 100% 305.677% no-repeat;
-    padding-top: 7rem;
+    padding-top: 4rem;
+    @include md {
+      padding-top: 7rem;
+    }
 
     .contentWrapper:first-child {
         padding: 0 60px;
@@ -151,7 +154,7 @@
 
     .contentWrapper:nth-child(2){
         display: block;
-        padding: 6.3rem 0 6.3rem 12px;
+        padding: 6.3rem 0 1.3rem 12px;
         @include md{
             display: none;
         }
@@ -218,21 +221,25 @@
     }
 
     .contentWrapper:last-child {
-      padding: 0 60px;
+      padding: 0;
+      @include md {
+        padding: 0 60px;
+        
+      }
 
       .sec4-bot{
           width: 100%;
-          margin-left: 10px;
+          margin-left: 0 !important;
           font-weight: 800;
           -webkit-text-stroke: 1px #16A571;
           color: transparent;
-          margin-bottom: 5rem;
+          margin-bottom: 8rem;
           @include md{
               margin-bottom: 4rem;
           }
       }
         p{
-            font-size: 3rem;
+            font-size: 4.9rem;
             font-style: normal;
             font-weight: 800;
             line-height: 9rem; 
@@ -243,7 +250,7 @@
             span{
                 color: $text-second;
                 background-clip: text;
-                font-size: 3rem;
+                font-size: 4.9rem;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 9rem;
