@@ -88,10 +88,9 @@
 
     .contentWrapper:last-child {
       padding: 0;
-      @include md {
-        padding: 0 60px;
-        
-      }
+      // @include md {
+      //   padding: 0 60px;
+      // }
 
       .sec4-bot{
           width: 100%;
@@ -107,7 +106,7 @@
           }
       }
         p{
-            font-size: 6rem;
+            font-size: 4.5rem;
             font-style: normal;
             font-weight: 800;
             line-height: 9rem; 
@@ -115,16 +114,23 @@
             @include md{
                 font-size: 4.5rem;
             }
+            @media screen and (min-width: 769px) and (max-width: 1250px) {
+              font-size: 3.3rem;
+            }
+
             span{
                 color: $text-second;
                 background-clip: text;
-                font-size: 6rem;
+                font-size: 4.5rem;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 9rem;
                 text-transform: uppercase;
                 @include md {
                     font-size: 4.5rem;
+                }
+                @media screen and (min-width: 769px) and (max-width: 1250px) {
+                  font-size: 3.3rem;
                 }
             }
         }
