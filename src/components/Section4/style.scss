@@ -9,152 +9,18 @@
     }
 
     .contentWrapper:first-child {
-        padding: 0 60px;
+        padding: 2rem 60px 5rem;
         margin-bottom: -4rem;
         display: none;
         @include md {
             display: block;
         }
-        .grid-container{
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-template-rows : auto auto auto auto;
-            grid-gap: 0.2rem;
-            // padding: 1rem;
-    
-            .item1,
-            .item2,
-            .item3,
-            .item4,
-            .item5,
-            .item6,
-            .item7,
-            .item8,
-            .item9,
-            .item10,
-            .item11{
-                display: flex;
-                height: fit-content;
-                justify-content: flex-end;
-    
-                &:hover {
-                    scale: 1.1;
-                    z-index: 2;
-                    transition: 0.3s ease-in-out;
-                }
-            }
-    
-                
-    
-                .item1 {
-                    grid-column-start:1;
-                    grid-column-end: 2;
-                    grid-row-start: 1;
-                    grid-row-end:2;
-                  }
-                  .item2 {
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 1;
-                    grid-row-end:2;
-                    width: 18.2rem;
-                    height: 12.27rem;
-                    
-                  }
-                  .item3{
-                    grid-column-start: 3;
-                    grid-column-end: 3;
-                    grid-row-start: 1;
-                    grid-row-end:2;
-                    width: 14.7rem;
-                    height: 19rem;
-                    z-index: 1;
-                  }
-                  .item4{
-                    grid-column-start: 4;
-                    grid-column-end: 4;
-                    grid-row-start: 1;
-                    grid-row-end:2;
-                    width: 18.2rem;
-                    height: 12.27rem;
-                    position: relative;
-                    right: 11.6rem;
-                    
-                  }
-                  .item5{
-                    grid-column-start: 1;
-                    grid-column-end: 2;
-                    grid-row-start: 2;
-                    grid-row-end:4;
-                    width: 28.5rem;
-                    height: 28.9rem;
-                    position: relative;
-                    top: -6.7rem;
-                    
-                  }
-                  .item6{
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 2;
-                    grid-row-end:3;
-                    position: relative;
-                    top: -6.7rem;   
-                    // position: relative;
-                    // top: -11.4rem;
-                  }
-                  .item7{
-                    grid-column-start: 3;
-                    grid-column-end: 4;
-                    grid-row-start: 2;
-                    grid-row-end:3;
-                    position: relative;
-                    top: -6.7rem;
-                    width: 20.5rem;
-                    height: 16rem;
-                    // position: relative;
-                    // top: -11.4rem;
-                  }
-                  .item8{
-                    grid-column-start: 4;
-                    grid-column-end: 5;
-                    grid-row-start: 2;
-                    grid-row-end:3;
-                    width: 12.3rem;
-                    height: 13rem;
-                    position: relative;
-                    top: -4.7rem;
-                    right: 2.5rem;
-                  }
-                  .item9{
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 3;
-                    grid-row-end:4;
-                    width: 18rem;
-                    position: relative;
-                    top: -6.7rem;
-                    height: 12.7rem;
-                    right: -0.7rem;
-                  }
-                  .item10 {
-                    grid-column-start: 3;
-                    grid-column-end: 4;
-                    grid-row-start: 3;
-                    grid-row-end:4;
-                    width: 26rem;
-                    height: 14.8rem;
-                    position: relative;
-                    top: -6.7rem;
-                    right: 3.3rem;
-                  }
-    
-                      
-        }
+        
     }
 
     .contentWrapper:nth-child(2){
         display: block;
-        padding: 6.3rem 0 1.3rem 12px;
+        padding: 9.3rem 0 1.3rem 12px;
         @include md{
             display: none;
         }
@@ -233,13 +99,15 @@
           font-weight: 800;
           -webkit-text-stroke: 1px #16A571;
           color: transparent;
-          margin-bottom: 8rem;
+          padding-bottom: 12rem;
+          padding-top: 5rem;
           @include md{
-              margin-bottom: 4rem;
+              padding-bottom: 4rem;
+              padding-top: 0;
           }
       }
         p{
-            font-size: 4.9rem;
+            font-size: 6rem;
             font-style: normal;
             font-weight: 800;
             line-height: 9rem; 
@@ -250,7 +118,7 @@
             span{
                 color: $text-second;
                 background-clip: text;
-                font-size: 4.9rem;
+                font-size: 6rem;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 9rem;
@@ -262,4 +130,42 @@
         }
     }
     
+}
+
+
+.flex-containersc4{
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .flex-top{
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+    align-items: flex-end;
+  }
+
+  .flex-bot{
+    display: flex;
+    gap: 0.1rem;
+
+  }
+
+  .flex-bot-right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+  }
+  .flex-bot-right-top,
+  .flex-bot-right-bot{
+    display: flex;
+    gap: 0.1rem;
+    
+  }
 }

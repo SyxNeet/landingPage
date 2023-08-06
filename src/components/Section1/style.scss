@@ -6,15 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // height: 100rem;
+    
     @include md{
         height: auto;
-
+        // margin-bottom: 11rem;
     }
     .slide-item {
         font-size: 1.8rem;
         height: 100%;
-        width: 100vw;
+        // width: 100vw;
         position: relative;
         padding: 52rem 0;
         @include md {

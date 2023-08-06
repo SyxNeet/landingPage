@@ -5,6 +5,10 @@ import img1 from "../../assets/section2/img1.png";
 import imgCenter from "../../assets/section2/img2.png";
 import img3 from "../../assets/section2/img3.png";
 import img4 from "../../assets/section2/img4.png";
+import layout1 from '../../assets/section2/layout1.png'
+import layout2 from '../../assets/section2/layout2.png'
+import layout3 from '../../assets/section2/layout3.png'
+
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Fade from "react-reveal/Fade";
 import "./style.scss";
@@ -37,39 +41,50 @@ function Section2() {
             </div>
           </div>
           <div className='content-right'>
-            <div className='grid-container'>
-              {/* <Fade right> */}
-              <div className='item1'></div>
-              {/* </Fade> */}
-
-              <div className='item2'>
-                <Fade right>
-                  <img src={img4} alt='' />
-                </Fade>
+            <div className='flex-container'>
+              <div className='flex-left'>
+                <div className='flex-left-top'>
+                  <div className='item3'>
+                    <Fade left>
+                      <img src={img1} alt='' />
+                    </Fade>
+                  </div>
+                  <div className='item7'>
+                    <Fade left>
+                      <img src={imgCenter} alt='' />
+                    </Fade>
+                  </div>
+                </div>
+                <div className='flex-left-bot'>
+                  <div className='item4'>
+                    <img src={layout2} alt="" />
+                  </div>
+                  <div className='item2'>
+                    <Fade right>
+                      <img src={img4} alt='' />
+                    </Fade>
+                  </div>
+                </div>
               </div>
-              <div className='item3'>
-                <Fade left>
-                  <img src={img1} alt='' />
-                </Fade>
-              </div>
 
-              <div className='item4'></div>
+              <div className='flex-right'>
+                <div className='item1'>
+                  <img src={layout1} alt="" />
+                </div>
+                <div className='item5'>
+                  <Fade right>
+                    <img src={img3} alt='' />
+                  </Fade>
+                </div>
+                <div className='item6'>
+                  <img src={layout3} alt="" />
 
-              <div className='item5'>
-                <Fade right>
-                  <img src={img3} alt='' />
-                </Fade>
-              </div>
-
-              <div className='item6'></div>
-
-              <div className='item7'>
-                <Fade left>
-                  <img src={imgCenter} alt='' />
-                </Fade>
+                </div>
               </div>
             </div>
           </div>
+
+
         </div>
 
         <div className='section-bot'>
@@ -82,9 +97,7 @@ function Section2() {
               </>
             )}
           </Ticker>
-          {/* <p>
-            offshore <span> Energy </span> installation
-          </p> */}
+
         </div>
       </div>
     </ContentWrapper>

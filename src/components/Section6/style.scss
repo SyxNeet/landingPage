@@ -4,10 +4,10 @@
 .section6{
 
     .contentWrapper{
-        padding: 6.3rem 0 6.3rem 12px;
+        padding: 10.3rem 0 10.3rem 12px;
 
         @include md{
-            padding: 6.3rem 60px;
+            padding: 6.3rem 50px;
         }
     }
 
@@ -102,11 +102,15 @@
             background-color: white !important;
             top: auto;
             bottom: 5.5rem;
-            left: 22%;
+            // left: 22%;
             @include md {
-                left: 15%;
+                left: 10rem;
                 bottom: 2.5rem;
 
+            }
+            @media screen and (max-width :768px){
+                position: absolute;
+                left: 20rem;
             }
             .swiper-pagination-progressbar-fill {
                 background-color: #4CA757;
@@ -119,11 +123,21 @@
             color: white;
             background-color: #4CA757;
             border: 1px solid #4CA757;
+
+            @media screen and (max-width :768px){
+                padding: 4rem;
+                margin-left: 1rem;
+            }
         }
         .swiper-button-prev {
             bottom: 1.5rem;
             top: auto;
-            
+           
+
+             @media screen and (max-width :768px){
+                position: absolute;
+                left: 0;
+            }
         }
         .swiper-button-next {
             bottom: 1.5rem;

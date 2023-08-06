@@ -8,80 +8,87 @@ import img2 from "../../assets/section4/img2.png";
 import img3 from "../../assets/section4/img3.png";
 import img4 from "../../assets/section4/img4.png";
 import img5 from "../../assets/section4/img5.png";
-import img6 from "../../assets/section4/img6.png";
 import img7 from "../../assets/section4/img7.png";
 import img8 from "../../assets/section4/img8.png";
 import img9 from "../../assets/section4/img9.png";
 import img10 from "../../assets/section4/img10.png";
+import item1 from '../../assets/section4/item1.png';
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Ticker from "react-ticker";
 import { Image } from "antd";
 
 function Section4() {
 
-  const listImg = [img5, img2, img3, img4, img5, img6, img7, img8, img9];
+  const listImg = [img5, img2, img3, img4, img5, img7, img8, img9];
   return (
     <div className='section4'>
       <ContentWrapper>
-        <div className='grid-container'>
-          <div className='item1'>
-            <Fade left>
-              <img src={img2} alt='' />
-            </Fade>
+        <div className='flex-containersc4'>
+          <div className='flex-top'>
+            <div className='item1'>
+              <Fade left>
+                <img src={item1} alt="" />
+              </Fade>
+            </div>
+            <div className='item2'>
+              <Fade left>
+                <img src={img8} alt="" />
+              </Fade>
+            </div>
+            <div className='item3'>
+              <Fade right>
+                <img src={img7} alt="" />
+              </Fade>
+            </div>
+            <div className='item4'>
+              <Fade right>
+                <img src={img5} alt="" />
+              </Fade>
+            </div>
           </div>
+          <div className='flex-bot'>
+            <div className='item5'>
+              <Fade left>
+                <img src={img7} alt="" />
+              </Fade>
+            </div>
+            <div className='flex-bot-right'>
+              <div className='flex-bot-right-top'>
+                <div className='item6'>
+                  <Fade left>
+                    <img src={img3} alt="" />
+                  </Fade>
+                </div>
+                <div className='item7'>
+                  <Fade right>
+                    <img src={img4} alt="" />
+                  </Fade>
+                </div>
+                <div className='item8'>
+                  <Fade right>
+                    <img src={img1} alt="" />
+                  </Fade>
+                </div>
+              </div>
+              <div className='flex-bot-right-bot'>
+                <div className='item9'>
+                  <Fade left>
+                    <img src={img2} alt="" />
+                  </Fade>
 
-          <div className='item2'>
-            <Fade top>
-              <img src={img8} alt='' />
-            </Fade>
-          </div>
+                </div>
+                <div className='item10'>
+                  <Fade right>
+                    <img src={img9} alt="" />
+                  </Fade>
 
-          <div className='item3'>
-            <Fade top>
-              <img src={img7} alt='' />
-            </Fade>
+                </div>
+                <div className='item11'></div>
+              </div>
+            </div>
           </div>
-
-          <div className='item4'>
-            <Fade right>
-              <img src={img5} alt='' />
-            </Fade>
-          </div>
-
-          <div className='item5'>
-            <Fade left>
-              <img src={img6} alt='' />
-            </Fade>
-          </div>
-
-          <div className='item6'>
-            <Fade top>
-              <img src={img3} alt='' />
-            </Fade>
-          </div>
-
-          <div className='item7'>
-            <Fade top>
-              <img src={img4} alt='' />
-            </Fade>
-          </div>
-          <div className='item8'>
-            <Fade right>
-              <img src={img1} alt='' />
-            </Fade>
-          </div>
-          <div className='item9'>
-            <Fade bottom>
-              <img src={img2} alt='' />
-            </Fade>
-          </div>
-          <div className='item10'>
-            <Fade bottom>
-              <img src={img9} alt='' />
-            </Fade>
-          </div>
-          <div className='item11'></div>
         </div>
+
       </ContentWrapper>
 
       <ContentWrapper>
